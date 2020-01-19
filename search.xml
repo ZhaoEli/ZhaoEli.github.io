@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>2019回顾总结一个字：难！</title>
+    <url>/2020/01/15/2%E3%80%812019%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>转眼到了2020年，我也在今年正式成为“奔四”的中年人。从2017年毕业以来，我一直在油腻的中年路上狂奔。<br>2019年对我来说是个多事之秋的一年，从创业到就业，从存款六位数到一无所有，从相恋到失恋，从公司成立到倒闭……<br>总言言之，总而言之，用一个字形容就是：难!</p>
+<a id="more"></a>
+
+<h2 id="2019-01-曙光与希望"><a href="#2019-01-曙光与希望" class="headerlink" title="2019. 01 曙光与希望"></a>2019. 01 曙光与希望</h2><p>随着持续大半年的中美贸易战的升级，中国的各大小企业都不太好过。最直接的影响莫过于互联网的资本寒冬，每家每户都缩着脑袋开源节流。从经济贸易难以为继到BAT大幅裁员似乎是一瞬间的事情。<br>小鹏汽车创始人在连续亏损半年后，在接收记者采访时，问道一句话形容一下今年的处境，他想了一下，带着无奈和心酸说：难！<br>说实话，挺后悔的在这个风口浪尖涉足这条孤舟，毫无感知毫无防备地驶向了茫茫大海。我从2018年12月25日（圣诞节）成了自己的公司，经营电商。因为前期准备觉得自己万无一失，凭着路演一路闯北走南，期望斩下天使基金。我给自己的最低期望是500w人民币。</p>
+]]></content>
+      <tags>
+        <tag>网站与作者</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello 独立博客</title>
+    <url>/2020/01/01/1%E3%80%81hello%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>为什么是独立博客？</p>
+</blockquote>
+<p>在2020年1月1日，元旦放假。这一天早上起来，突然想弄一个独立博客，但是总是觉得弄独立博客是一个非常花时间花精力的事情，工作很忙，晚上回来很难有精力再来搞博客内容的更新。最终还是收到云邪博客的吸引，决定自己也弄一个。</p>
+<a id="more"></a>
+<p>自己在CSDN上也有写博客，很少，大部分是解决问题自己记录给自己看。之所以要一个独立博客，我觉得有以下几个原因在驱动我吧。</p>
+<blockquote>
+<ul>
+<li>独立，自由，简洁。不会像某些平台上的博客一样，广告乱飞。</li>
+<li>够酷。能有一个专属自己的域名。虽然是zhaoeli.github.com，但毕竟没有广告，也很清爽，算是自己的小窝吧。</li>
+<li>回馈精神。就像开源软件，我们不断地从开源社区获得那么多的便利与知识，当然也要回馈社区。   </li>
+<li>成长的记录。即时你现在分享的是别人耻笑的水文，那又如何。在分享的过程中，已经远远超过那些人了。——摘自云邪</li>
+</ul>
+</blockquote>
+<h2 id="Hello-Hexo"><a href="#Hello-Hexo" class="headerlink" title="Hello Hexo"></a><strong>Hello Hexo</strong></h2><blockquote>
+<p>关于博客的搭建，很多大神已经写了很详细的教程了，我就不班门弄斧了，主要谈谈自己的搭建过程的感受。</p>
+</blockquote>
+<p><strong>吃一堑长一智：</strong>建立博客准备，从几个博客框架最终选择了Hexo。因为Hexo主题较多，教程完善，真的很不错。我花了17小时小时，就搭建起来了，其中15小时一直在踩坑，也正是因为这些踩坑，让我对Hexo有了更多的了解。希望以后Hexo出现问题，应该能及时被我解决吧。毕竟人错误问题解决多了，谁都能是该领域的大神和专家。</p>
+<!-- 遇到The file will have its original line endings in your working directory 解决办法(http://www.bubuko.com/infodetail-2972518.html?__cf_chl_jschl_tk__=11eef45c84fc8bffbd86038ccb93b094bc136b5c-1579403748-0-Af692ww2DKYQB4APTzpxyv83-XxCAEq4wSiJ_2hzYd0xTWGWxhNmrWKetHp__C8bGl9Prgy1l164xT5Db0RZCczy8aR1vWIO-8sjcD93g3ZnpDPWN6lZJKw2F3PbdbfkFQd6EkzgV88U2b3jC43OUQ7X3vM9gG91w5v8BY48SsZTXnbNYzzIt-ZyLrkVAGTrUGiw6Dw62dFfPdlCf4vIeu5N8nNOR-0sWt98SzlKvsfNQWE-usY1KQIvIsSx6b64i8LUztn9d6pRT23BIDNFY3wuoT2ZneJ3SfcX4RjBNM7c)-->
+
+<p>Markdown，写博客当然要用这个。MD语法简直爱的不行，几乎所有程序员的“御用”语言，由于不经常用MD格式，所以还是用的<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener"><strong>在线编辑器</strong></a>，所见即所得地编写。</p>
+<h2 id="对博客未来的打算"><a href="#对博客未来的打算" class="headerlink" title="对博客未来的打算"></a><strong>对博客未来的打算</strong></h2><p>既然花了精力和时间搞了博客，当然希望能坚持下去。希望自己可以以此为动力，驱动自己去深入学习一些技术，并锻炼自己的总结分享能力，希望自己以后写的东西能帮助到其他人就好。</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a><strong>感谢</strong></h2><p>非常长些阿里巴巴Flink Commiter <a href="http://wuchong.me/" target="_blank" rel="noopener"><strong>云邪</strong></a>，他的博客让我学到很多东西，也真正让我下定决心建立这个博客基地。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a><strong>参考文献</strong></h2><hr>
+<blockquote>
+<p>有任何关于Hexo的问题，欢迎来 Hexo 中文社区 咨询。<br>个人邮箱： <a href="mailto:zhaoai2007@126.com">zhaoai2007@126.com</a> ,微信：zhaoai2 ,欢迎骚扰。</p>
+</blockquote>
+<ol>
+<li><a href="https://www.jianshu.com/p/77db3862595c" target="_blank" rel="noopener">Hexo你的博客</a></li>
+<li>[给Hexo添加404页面]</li>
+<li><a href="https://blog.csdn.net/Mr_JavaScript/article/details/83043174" target="_blank" rel="noopener">GitHub每次push时都提示输入用户名和密码的问题</a></li>
+<li><a href="https://www.jianshu.com/p/5b39e3404a35" target="_blank" rel="noopener">给hexo添加系列文章功能</a></li>
+<li><a href="https://blog.csdn.net/qwerty200696/article/details/79010629" target="_blank" rel="noopener">hexo博客优化之文章置顶+置顶标签</a></li>
+<li><a href="https://www.jianshu.com/p/ba61be039c1f" target="_blank" rel="noopener">hexo之next主题优化整理</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next官方文档</a></li>
+<li><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题市场</a></li>
+<li><a href="https://blog.csdn.net/Wonz5130/article/details/84666519" target="_blank" rel="noopener">解决 Hexo 搭建博客显示不出分类、标签问题</a></li>
+<li><a href="https://www.jianshu.com/p/9c2d6db2f855" target="_blank" rel="noopener">生成sitemap站点地图</a>、<a href="https://blog.csdn.net/qiuchengjia/article/details/52923170" target="_blank" rel="noopener">2</a></li>
+<li><a href="https://blog.csdn.net/mobiusstrip/article/details/87258612" target="_blank" rel="noopener">Hexo优化:创建sitemap站点地图并向Google站长工具提交</a></li>
+<li><a href="https://www.jianshu.com/p/d388119a90ec" target="_blank" rel="noopener">Hexo增加搜索功能</a><br>附：<a href="https://segmentfault.com/a/1190000011917419" target="_blank" rel="noopener">进阶：Hexo搜索功能实现站内搜索</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>我的个人介绍</category>
+      </categories>
+      <tags>
+        <tag>网站与作者</tag>
+      </tags>
+  </entry>
+</search>
