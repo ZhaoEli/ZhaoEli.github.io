@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhaoeli.github.io","root":"/","scheme":"Mist","version":"7.7.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"zhaoeli.github.io","root":"/","scheme":"Mist","version":"7.7.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="转眼到了2020年，我也在今年正式成为“奔四”的中年人。从2017年毕业以来，我一直在油腻的中年路上狂奔。2019年对我来说是个多事之秋的一年，从创业到就业，从存款六位数到一无所有，从相恋到失恋，从公司成立到倒闭……总言言之，总而言之，用一个字形容就是：难!">
@@ -106,6 +106,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -139,9 +140,35 @@
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+  
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -151,8 +178,6 @@
     <span>0%</span>
   </div>
   <a role="button" class="book-mark-link book-mark-link-fixed"></a>
-
-  <a href="https://github.com/yourname" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
     <main class="main">
@@ -171,7 +196,7 @@
     <link itemprop="mainEntityOfPage" href="https://zhaoeli.github.io/2020/01/15/2019%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
       <meta itemprop="name" content="赵瑷(Eli)">
       <meta itemprop="description" content="热爱生活，有梦可做。">
     </span>
@@ -218,6 +243,20 @@
               <span class="post-meta-item-text">阅读次数：</span>
               <span class="leancloud-visitors-count"></span>
             </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/01/15/2019%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/15/2019%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -228,9 +267,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>转眼到了2020年，我也在今年正式成为“奔四”的中年人。从2017年毕业以来，我一直在油腻的中年路上狂奔。<br>2019年对我来说是个多事之秋的一年，从创业到就业，从存款六位数到一无所有，从相恋到失恋，从公司成立到倒闭……<br>总言言之，总而言之，用一个字形容就是：难!</p>
-<a id="more"></a>
-
+        <p>转眼到了2020年，我也在今年正式成为“奔四”的中年人。从2017年毕业以来，我一直在油腻的中年路上狂奔。<br>2019年对我来说是个多事之秋的一年，从创业到就业，从存款六位数到一无所有，从相恋到失恋，从公司成立到倒闭……<br>总言言之，总而言之，用一个字形容就是：难!<br><a id="more"></a></p>
 <h2 id="2019-01-视界边缘"><a href="#2019-01-视界边缘" class="headerlink" title="2019. 01 视界边缘"></a>2019. 01 视界边缘</h2><p>随着持续大半年的中美贸易战的升级，中国的各大小企业都不太好过。最直接的影响莫过于互联网的资本寒冬，每家每户都缩着脑袋开源节流。从经济贸易难以为继到BAT大幅裁员似乎是一瞬间的事情。<br>小鹏汽车创始人在连续亏损半年后，在接收记者采访时，问道一句话形容一下今年的处境，他想了一下，带着无奈和心酸说：难！<br>说实话，挺后悔的在这个风口浪尖涉足这条孤舟，毫无感知毫无防备地驶向了茫茫大海。我从2018年12月25日（圣诞节）成了自己的公司，经营电商。因为前期准备觉得自己万无一失，凭着路演一路闯北走南，期望斩下天使基金。我给自己的最低期望是500w人民币。<br>从此的半年期间，见了无数的投资人与财团机构，从南到北，梦想四处碰壁。</p>
 <h2 id="2019-06-奇点"><a href="#2019-06-奇点" class="headerlink" title="2019.06 奇点"></a>2019.06 奇点</h2><p>与黑洞的奇点让一切都回到了初始状态，在即将迎来批量客户时，项目无法交付导致整个创益营收的失败。一切兜兜转转又回到了原处。06月在西湖区一家互联网公司入职，同时蛰伏状态寻求下一次机会。</p>
 <h2 id="2019-07-潮汐撕碎"><a href="#2019-07-潮汐撕碎" class="headerlink" title="2019.07 潮汐撕碎"></a>2019.07 潮汐撕碎</h2><p>身体开始间断肌肉僵硬状态，因为我有经常跑步的习惯，以为是跑完没有足够的舒展运动造成的乳酸堆积，也没有过多关注自己的身体。直到越来越严重，我一个人在房间里醒来发现只有嘴还能懂以外，身体的其他部分像不在身体上一样，无法控制。那一天成了我2019年最难熬的一天，自己给自己签了《病危通知书》。</p>
@@ -259,35 +296,6 @@
   </li>
 </ul>
 </div>
-
-        
-
-  <div class="followme">
-    <p>欢迎关注我的其它发布渠道</p>
-
-    <div class="social-list">
-
-            <div class="social-item">
-              <a target="_blank" class="social-link" href="https://twitter.com/username">
-                <span class="icon">
-                  <i class="fa fa-twitter"></i>
-                </span>
-
-                <span class="label">Twitter</span>
-              </a>
-            </div>
-
-            <div class="social-item">
-              <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
-                <span class="icon">
-                  <i class="fa fa-wechat"></i>
-                </span>
-
-                <span class="label">WeChat</span>
-              </a>
-            </div>
-    </div>
-  </div>
 
 
       <footer class="post-footer">
@@ -321,6 +329,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -367,14 +376,14 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-01-视界边缘"><span class="nav-number">1.</span> <span class="nav-text">2019. 01 视界边缘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-06-奇点"><span class="nav-number">2.</span> <span class="nav-text">2019.06 奇点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-07-潮汐撕碎"><span class="nav-number">3.</span> <span class="nav-text">2019.07 潮汐撕碎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-08-维度并存"><span class="nav-number">4.</span> <span class="nav-text">2019.08 维度并存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-11-回归正常轨道"><span class="nav-number">5.</span> <span class="nav-text">2019.11 回归正常轨道</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-01-视界边缘"><span class="nav-text">2019. 01 视界边缘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-06-奇点"><span class="nav-text">2019.06 奇点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-07-潮汐撕碎"><span class="nav-text">2019.07 潮汐撕碎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-08-维度并存"><span class="nav-text">2019.08 维度并存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-11-回归正常轨道"><span class="nav-text">2019.11 回归正常轨道</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="赵瑷(Eli)"
-      src="/images/avatar.gif">
+      src="/uploads/avatar.jpg">
   <p class="site-author-name" itemprop="name">赵瑷(Eli)</p>
   <div class="site-description" itemprop="description">热爱生活，有梦可做。</div>
 </div>
@@ -403,16 +412,16 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/ZhaoEli" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZhaoEli" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+        <a href="mailto:zhaoai2007@126.com" title="E-Mail → mailto:zhaoai2007@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
         <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://instagram.com/yourname" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+        <a href="https://instagram.com/eli_cli" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;eli_cli" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
       </span>
   </div>
 
@@ -439,13 +448,8 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ZHAOEli©2020</span>
+  <span class="author" itemprop="copyrightHolder">赵瑷(Eli)</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.1
-  </div>
 
         
 
@@ -454,100 +458,6 @@
 
 
 
-  <script>
-  function leancloudSelector(url) {
-    url = encodeURI(url);
-    return document.getElementById(url).querySelector('.leancloud-visitors-count');
-  }
-  if (CONFIG.page.isPost) {
-    function addCount(Counter) {
-      var visitors = document.querySelector('.leancloud_visitors');
-      var url = decodeURI(visitors.getAttribute('id'));
-      var title = visitors.getAttribute('data-flag-title');
-
-      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            var counter = results[0];
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .then(response => response.json())
-              .then(() => {
-                leancloudSelector(url).innerText = counter.time + 1;
-              })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              })
-          } else {
-              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-  } else {
-    function showTime(Counter) {
-      var visitors = document.querySelectorAll('.leancloud_visitors');
-      var entries = [...visitors].map(element => {
-        return decodeURI(element.getAttribute('id'));
-      });
-
-      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length === 0) {
-            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
-              element.innerText = 0;
-            });
-            return;
-          }
-          for (let item of results) {
-            let { url, time } = item;
-            leancloudSelector(url).innerText = time;
-          }
-          for (let url of entries) {
-            var element = leancloudSelector(url);
-            if (element.innerText == '') {
-              element.innerText = 0;
-            }
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-  }
-
-  fetch('https://app-router.leancloud.cn/2/route?appId=wzWF4LE9UsKNHp0L1Me2rK2Y-gzGzoHsz')
-    .then(response => response.json())
-    .then(({ api_server }) => {
-      var Counter = (method, url, data) => {
-        return fetch(`https://${api_server}/1.1${url}`, {
-          method: method,
-          headers: {
-            'X-LC-Id'     : 'wzWF4LE9UsKNHp0L1Me2rK2Y-gzGzoHsz',
-            'X-LC-Key'    : 'ImumsgJHuK7XVkyJrCuiqd4O',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
 
 
       </div>
@@ -579,6 +489,13 @@
 
 
 
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
+
+
 
 
 
@@ -593,6 +510,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'wzWF4LE9UsKNHp0L1Me2rK2Y-gzGzoHsz',
+      appKey     : 'ImumsgJHuK7XVkyJrCuiqd4O',
+      placeholder: "来啊，快活呀！看完给个评论呗，作者需要你的支持！",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":320},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
