@@ -1188,7 +1188,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #dfffff;
+  background: #ff1ab9;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1513,6 +1513,7 @@ pre .javascript .function {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
+/*这是图片下方的横线*/
 }
 @media (min-width: 1200px) {
   .post-body {
@@ -1525,19 +1526,30 @@ pre .javascript .function {
 }
 .post-body .image-caption,
 .post-body .figure .caption {
-  color: #999;
-  font-size: 0.875em;
-  font-weight: bold;
-  line-height: 1;
-  margin: -20px auto 15px;
+  min-width: 20%;
+  max-width: 80%;
+  min-height: 22px;
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #969696;
+  line-height: 1.7;
   text-align: center;
+}
+.post-body .image-caption:after {
+  content: '';
+  width: 100px;
+  height: 1px;
+  display: block;
+  margin: 2px auto;
+  background-color: #d9d9d9;
 }
 .post-sticky-flag {
   display: inline-block;
   transform: rotate(30deg);
 }
 .post-button {
-  margin-top: 40px;
   text-align: center;
 }
 .use-motion .post-block,
@@ -2476,7 +2488,8 @@ hr {
   text-align: center;
 }
 .posts-expand .post-body img {
-  margin-left: 0;
+  margin-left: auto;
+  margin: auto;
 }
 .posts-expand .post-tags {
   text-align: left;
